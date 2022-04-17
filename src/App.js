@@ -3,6 +3,7 @@ import Cart from "./Components/Cart";
 import Products from './Components/Products';
 import Logo from "./Components/Assets/img/logo.png"
 import filterList from "./Components/filterList"
+import "./App.scss"
 
 const App = () => {
 
