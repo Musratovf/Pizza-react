@@ -26,14 +26,14 @@ const Cart = ({products, changeQuantity}) => {
             <button className='toggle-btn' onClick={toggleBtn}>
                 Cart
             </button>
-            <div className={classActive ? "active" : ""}>
+            <div className={classActive ? "active" : "bnnma"}>
                 <div className='shopping-cart'>
                     <div className='cartContent'>
                         <div className="cartList">
                             {
                                 products.length === 0 ?
                                 <div className='emptyCart'>
-                                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fru.freepik.com%2Fpremium-vector%2Frealistic-empty-supermarket-shopping-cart-isolated-on-white_5323164.htm&psig=AOvVaw3BPvV0cefkKzLtSf3z4y4U&ust=1650256696915000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKDerLijmvcCFQAAAAAdAAAAABAD" alt="pustoy cart" />
+                                    <img src="https://ettrico.com/public_assets/images/empty-cart.gif" alt="pustoy cart" />
                                 </div> : 
                                 products.map(product => {
                                     return (

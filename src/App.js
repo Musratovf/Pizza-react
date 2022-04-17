@@ -2,12 +2,19 @@ import React, {useState, useEffect} from 'react';
 import Cart from "./Components/Cart";
 import Products from './Components/Products';
 import Logo from "./Components/Assets/img/logo.png"
-
+import filterList from "./Components/filterList"
 
 const App = () => {
 
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState([])
+
+  useEffect(()=> {
+      setProducts(filterList([], null));
+      if(JSON.parse(localStorage.getItem('cart'))) {
+        setCart(JSON.parse(localStorage.getItem("cart")));
+      }
+  })
 
   const addNewCart = (item) => {
     const productList = [...cart]
